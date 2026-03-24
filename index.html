@@ -25,7 +25,9 @@
     <meta property="og:image" content="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80">
     <meta property="og:type" content="website">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FIX 1: FONT CHANGED — Barlow Condensed (bold/strong display) + Barlow (body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Barlow:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         /* ============================================
            EASY CUSTOMIZATION VARIABLES
@@ -55,8 +57,9 @@
             scroll-behavior: smooth;
         }
 
+        /* FIX 1: ALL font-family references updated to Barlow */
         body {
-            font-family: 'Outfit', -apple-system, sans-serif;
+            font-family: 'Barlow', -apple-system, sans-serif;
             background: var(--dark);
             color: var(--text-white);
             line-height: 1.6;
@@ -139,18 +142,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 0.9rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1rem;
             color: var(--dark);
-            font-weight: 700;
+            font-weight: 800;
         }
 
         .agent-name {
             font-size: 0.75rem;
-            font-weight: 500;
+            font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--text-white);
+            font-family: 'Barlow Condensed', sans-serif;
         }
 
         .top-bar-cta {
@@ -159,7 +163,7 @@
             color: white;
             text-decoration: none;
             font-size: 0.7rem;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
             border-radius: 3px;
@@ -167,6 +171,7 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            font-family: 'Barlow Condensed', sans-serif;
         }
 
         .top-bar-cta:hover {
@@ -238,26 +243,30 @@
             text-transform: uppercase;
             color: var(--accent);
             margin-bottom: 20px;
-            font-weight: 500;
+            font-weight: 700;
+            font-family: 'Barlow Condensed', sans-serif;
         }
 
         .hero-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.8rem, 5vw, 3rem);
-            font-weight: 700;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(2.4rem, 6vw, 4rem);
+            font-weight: 900;
             color: white;
-            line-height: 1.2;
+            line-height: 1.05;
             margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .hero-location {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: var(--text-gray);
             margin-bottom: 24px;
-            font-weight: 300;
+            font-weight: 500;
             display: flex;
             align-items: center;
             gap: 6px;
+            font-family: 'Barlow', sans-serif;
         }
 
         .hero-location svg {
@@ -269,12 +278,16 @@
             flex-shrink: 0;
         }
 
+        /* FIX 2: Hero price — now large, bold, always shows active currency */
         .hero-price {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
             color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 30px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            line-height: 1;
         }
 
         .hero-stats {
@@ -299,9 +312,10 @@
         }
 
         .hero-stat span {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--text-white);
-            font-weight: 400;
+            font-weight: 600;
+            font-family: 'Barlow', sans-serif;
         }
 
         .hero-cta {
@@ -312,11 +326,13 @@
             background: var(--whatsapp);
             color: white;
             text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 1px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 2px;
             border-radius: 4px;
             transition: all 0.3s ease;
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
         }
 
         .hero-cta:hover {
@@ -349,19 +365,21 @@
         }
 
         .info-value {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2rem;
             color: var(--accent);
-            font-weight: 600;
+            font-weight: 900;
             margin-bottom: 4px;
+            letter-spacing: 1px;
         }
 
         .info-label {
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--text-gray);
-            font-weight: 400;
+            font-weight: 700;
+            font-family: 'Barlow', sans-serif;
         }
 
         /* ============================================
@@ -378,22 +396,25 @@
         }
 
         .section-tag {
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             letter-spacing: 4px;
             text-transform: uppercase;
             color: var(--accent);
             margin-bottom: 16px;
             display: block;
-            font-weight: 500;
+            font-weight: 700;
+            font-family: 'Barlow Condensed', sans-serif;
         }
 
         .section-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.6rem, 3vw, 2.2rem);
-            font-weight: 600;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
             color: var(--text-white);
             margin-bottom: 30px;
-            line-height: 1.3;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .section-title em {
@@ -402,11 +423,12 @@
         }
 
         .desc-text {
-            font-size: 0.95rem;
+            font-size: 1rem;
             line-height: 1.9;
             color: var(--text-gray);
-            font-weight: 300;
+            font-weight: 400;
             margin-bottom: 20px;
+            font-family: 'Barlow', sans-serif;
         }
 
         .desc-text:last-of-type {
@@ -462,16 +484,20 @@
         }
 
         .feature-text h4 {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: var(--text-white);
             margin-bottom: 4px;
-            font-weight: 500;
+            font-weight: 700;
+            font-family: 'Barlow Condensed', sans-serif;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         .feature-text p {
-            font-size: 0.78rem;
+            font-size: 0.82rem;
             color: var(--text-gray);
-            font-weight: 300;
+            font-weight: 400;
+            font-family: 'Barlow', sans-serif;
         }
 
         /* ============================================
@@ -494,6 +520,8 @@
             position: relative;
             overflow: hidden;
             aspect-ratio: 4/3;
+            cursor: pointer;
+            /* FIX 3: Removed ::after hover "View" overlay entirely below */
         }
 
         .gallery-item.wide {
@@ -519,11 +547,15 @@
             right: 0;
             padding: 30px 15px 12px;
             background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             color: white;
             letter-spacing: 1px;
-            font-weight: 400;
+            font-weight: 700;
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
         }
+
+        /* FIX 3: NO ::after hover overlay — removed completely */
 
         /* ============================================
            MID-PAGE CTA — Catches people who've scrolled
@@ -537,18 +569,21 @@
         }
 
         .mid-cta h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.8rem;
             color: var(--text-white);
             margin-bottom: 8px;
-            font-weight: 400;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .mid-cta p {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--text-gray);
             margin-bottom: 25px;
-            font-weight: 300;
+            font-weight: 400;
+            font-family: 'Barlow', sans-serif;
         }
 
         .mid-cta a {
@@ -559,12 +594,13 @@
             background: var(--accent);
             color: var(--dark);
             text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 1px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 2px;
             text-transform: uppercase;
             border-radius: 3px;
             transition: all 0.3s ease;
+            font-family: 'Barlow Condensed', sans-serif;
         }
 
         .mid-cta a:hover {
@@ -600,17 +636,21 @@
         }
 
         .loc-card h4 {
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             color: var(--text-white);
             margin-bottom: 6px;
-            font-weight: 500;
+            font-weight: 800;
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .loc-card p {
-            font-size: 0.82rem;
+            font-size: 0.85rem;
             color: var(--text-gray);
-            font-weight: 300;
+            font-weight: 400;
             line-height: 1.6;
+            font-family: 'Barlow', sans-serif;
         }
 
         .map-container {
@@ -657,28 +697,32 @@
         }
 
         .agent-info h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.6rem;
             color: var(--text-white);
             margin-bottom: 4px;
-            font-weight: 600;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .agent-info .agent-title-role {
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             color: var(--accent);
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 12px;
-            font-weight: 400;
+            font-weight: 700;
+            font-family: 'Barlow Condensed', sans-serif;
         }
 
         .agent-info p {
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             color: var(--text-gray);
-            font-weight: 300;
+            font-weight: 400;
             line-height: 1.6;
             margin-bottom: 20px;
+            font-family: 'Barlow', sans-serif;
         }
 
         .agent-contact {
@@ -690,15 +734,16 @@
         .agent-btn {
             padding: 10px 24px;
             text-decoration: none;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 1px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 2px;
             text-transform: uppercase;
             border-radius: 3px;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
             gap: 6px;
+            font-family: 'Barlow Condensed', sans-serif;
         }
 
         .agent-btn.wa {
@@ -740,12 +785,14 @@
         }
 
         .final-cta h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.6rem, 4vw, 2.5rem);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
             color: var(--text-white);
             margin-bottom: 15px;
-            font-weight: 600;
-            line-height: 1.3;
+            font-weight: 900;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .final-cta h2 em {
@@ -754,12 +801,13 @@
         }
 
         .final-cta p {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: var(--text-gray);
             max-width: 500px;
             margin: 0 auto 35px;
-            font-weight: 300;
+            font-weight: 400;
             line-height: 1.7;
+            font-family: 'Barlow', sans-serif;
         }
 
         .final-cta-btns {
@@ -775,12 +823,13 @@
             gap: 10px;
             padding: 16px 40px;
             text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 1px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 2px;
             text-transform: uppercase;
             border-radius: 4px;
             transition: all 0.3s ease;
+            font-family: 'Barlow Condensed', sans-serif;
         }
 
         .final-btn.primary {
@@ -815,6 +864,7 @@
             font-size: 0.7rem;
             color: rgba(255,255,255,0.25);
             letter-spacing: 2px;
+            font-family: 'Barlow', sans-serif;
         }
 
         /* ============================================
@@ -828,9 +878,10 @@
         }
 
         .footer p {
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             color: rgba(255,255,255,0.2);
             line-height: 1.8;
+            font-family: 'Barlow', sans-serif;
         }
 
         .footer .powered {
@@ -868,10 +919,12 @@
 
         .analytics-badge h5 {
             color: var(--accent);
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 10px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
         }
 
         .analytics-badge .stat-row {
@@ -887,11 +940,13 @@
 
         .analytics-badge .stat-label {
             color: var(--text-gray);
+            font-family: 'Barlow', sans-serif;
         }
 
         .analytics-badge .stat-value {
             color: var(--text-white);
-            font-weight: 600;
+            font-weight: 700;
+            font-family: 'Barlow Condensed', sans-serif;
         }
 
         /* ============================================
@@ -969,779 +1024,749 @@
                 grid-template-columns: 1fr;
             }
         }
+
         /* ============================================
-   CURRENCY CONVERTER
-   ============================================ */
-.currency-converted {
-    font-size: 0.85rem;
-    color: var(--text-gray);
-    font-weight: 300;
-    margin-top: -20px;
-    margin-bottom: 30px;
-    font-family: 'Outfit', sans-serif;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.currency-converted .flag {
-    font-size: 1rem;
-}
-
-.currency-tag {
-    display: inline-block;
-    padding: 3px 10px;
-    background: rgba(200, 169, 81, 0.1);
-    border: 1px solid rgba(200, 169, 81, 0.2);
-    border-radius: 3px;
-    font-size: 0.65rem;
-    color: var(--accent);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-left: 8px;
-}
-
-.currency-selector {
-    margin-top: 8px;
-}
-
-.currency-selector select {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.15);
-    color: var(--text-gray);
-    padding: 6px 12px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.75rem;
-    border-radius: 3px;
-    cursor: pointer;
-    outline: none;
-    transition: border-color 0.3s ease;
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-.currency-selector select:hover,
-.currency-selector select:focus {
-    border-color: var(--accent);
-}
-
-.currency-selector select option {
-    background: var(--dark-2);
-    color: var(--text-white);
-}
-/* ============================================
-   ROI CALCULATOR
-   ============================================ */
-.roi-section {
-    padding: 80px 24px;
-    background: linear-gradient(180deg, var(--dark) 0%, var(--brand-color) 50%, var(--dark) 100%);
-}
-
-.roi-subtitle {
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--text-gray);
-    font-weight: 300;
-    max-width: 500px;
-    margin: -15px auto 50px;
-}
-
-.roi-calculator {
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    padding: 40px;
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.06);
-}
-
-.roi-inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-}
-
-.roi-field label {
-    display: block;
-    font-size: 0.72rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-gray);
-    margin-bottom: 10px;
-    font-weight: 400;
-}
-
-.roi-input-wrapper {
-    display: flex;
-    align-items: center;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.1);
-    padding: 0 15px;
-    transition: border-color 0.3s ease;
-}
-
-.roi-input-wrapper:focus-within {
-    border-color: var(--accent);
-}
-
-.roi-prefix {
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-right: 8px;
-}
-
-.roi-input-wrapper input {
-    background: transparent;
-    border: none;
-    color: var(--text-white);
-    font-family: 'Outfit', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 14px 0;
-    width: 100%;
-    outline: none;
-}
-
-.roi-input-wrapper input[readonly] {
-    color: var(--text-gray);
-}
-
-.roi-editable {
-    cursor: text;
-}
-
-.roi-slider-group {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.roi-slider {
-    flex: 1;
-    -webkit-appearance: none;
-    appearance: none;
-    height: 3px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 3px;
-    outline: none;
-    cursor: pointer;
-}
-
-.roi-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: var(--accent);
-    cursor: pointer;
-    border: 3px solid var(--dark);
-    box-shadow: 0 0 10px rgba(200,169,81,0.3);
-    transition: transform 0.2s ease;
-}
-
-.roi-slider::-webkit-slider-thumb:hover {
-    transform: scale(1.2);
-}
-
-.roi-slider::-moz-range-thumb {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: var(--accent);
-    cursor: pointer;
-    border: 3px solid var(--dark);
-}
-
-.roi-rate-display {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--accent);
-    min-width: 65px;
-    text-align: right;
-}
-
-.roi-results {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.roi-result-card {
-    padding: 20px 24px;
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.06);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.roi-result-card.main {
-    background: rgba(200, 169, 81, 0.08);
-    border-color: rgba(200, 169, 81, 0.2);
-    padding: 25px 24px;
-}
-
-.roi-result-card:hover {
-    background: rgba(255,255,255,0.04);
-}
-
-.roi-result-label {
-    font-size: 0.78rem;
-    color: var(--text-gray);
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-.roi-result-value {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem;
-    color: var(--text-white);
-    font-weight: 600;
-}
-
-.roi-result-value.accent {
-    color: var(--accent);
-    font-size: 1.4rem;
-}
-
-.roi-cta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 16px 30px;
-    background: var(--accent);
-    color: var(--dark);
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 3px;
-    transition: all 0.3s ease;
-    margin-top: 5px;
-}
-
-.roi-cta:hover {
-    background: var(--accent-hover);
-    transform: translateY(-2px);
-}
-
-.roi-disclaimer {
-    text-align: center;
-    font-size: 0.7rem;
-    color: rgba(255,255,255,0.2);
-    margin-top: 30px;
-    line-height: 1.6;
-    font-style: italic;
-}
-
-@media (max-width: 768px) {
-    .roi-calculator {
-        grid-template-columns: 1fr;
-        padding: 25px 20px;
-        gap: 30px;
-    }
-
-    .roi-result-card {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
-}
-/* ============================================
-   MOBILE PERFORMANCE FIXES
-   ============================================ */
-
-/* Prevent tap delay on mobile */
-a, button, select, input {
-    touch-action: manipulation;
-}
-
-/* Bigger tap targets on mobile */
-@media (max-width: 768px) {
-    .hero-cta,
-    .agent-btn,
-    .final-btn,
-    .top-bar-cta,
-    .mid-cta a,
-    .roi-cta {
-        min-height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .whatsapp-float {
-        width: 56px;
-        height: 56px;
-        bottom: 20px;
-        right: 20px;
-    }
-
-    /* Reduce image quality on mobile to load faster */
-    .gallery-item img,
-    .hero-img {
-        image-rendering: -webkit-optimize-contrast;
-    }
-
-    /* Sticky WhatsApp bar at bottom on mobile */
-    .mobile-sticky-cta {
-        display: flex;
-    }
-
-    .whatsapp-float {
-        display: none;
-    }
-}
-
-@media (min-width: 769px) {
-    .mobile-sticky-cta {
-        display: none;
-    }
-}
-
-.mobile-sticky-cta {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-    display: none;
-    background: var(--dark);
-    border-top: 1px solid rgba(200, 169, 81, 0.15);
-    padding: 10px 15px;
-    gap: 10px;
-}
-
-.mobile-sticky-cta a {
-    flex: 1;
-    padding: 14px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-
-.mobile-sticky-cta .mobile-wa {
-    background: var(--whatsapp);
-    color: white;
-}
-
-.mobile-sticky-cta .mobile-call {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.2);
-    color: white;
-}
-
-.mobile-sticky-cta .mobile-wa svg,
-.mobile-sticky-cta .mobile-call svg {
-    width: 16px;
-    height: 16px;
-}
-/* Cormorant needs slightly larger sizing to breathe */
-.hero-title {
-    font-size: clamp(2.2rem, 6vw, 3.8rem);
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-
-.section-title {
-    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-    font-weight: 400;
-}
-
-.hero-price {
-    font-weight: 500;
-    letter-spacing: 2px;
-}
-
-.info-value {
-    font-weight: 500;
-    font-size: 1.7rem;
-}
-
-.highlight-value,
-.investment-number {
-    font-weight: 400;
-}
-/* ============================================
-   ENHANCED ANIMATIONS
-   ============================================ */
-
-/* Number counting animation glow */
-.info-value {
-    transition: all 0.3s ease;
-}
-
-.info-value.counting {
-    color: #fff;
-    text-shadow: 0 0 20px rgba(200, 169, 81, 0.8);
-}
-
-/* Info bar items staggered */
-.info-item {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.info-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.info-item:nth-child(1) { transition-delay: 0.1s; }
-.info-item:nth-child(2) { transition-delay: 0.2s; }
-.info-item:nth-child(3) { transition-delay: 0.3s; }
-.info-item:nth-child(4) { transition-delay: 0.4s; }
-
-/* About section dramatic entrance */
-.description .section-tag {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.description .section-title {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
-}
-
-.description .desc-text {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.description .desc-text:nth-of-type(1) { transition-delay: 0.4s; }
-.description .desc-text:nth-of-type(2) { transition-delay: 0.6s; }
-
-.description.in-view .section-tag,
-.description.in-view .section-title,
-.description.in-view .desc-text {
-    opacity: 1;
-    transform: translateX(0) translateY(0);
-}
-
-/* Feature cards staggered animation */
-.feature-card {
-    opacity: 0;
-    transform: translateY(40px) scale(0.95);
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.feature-card.visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-.feature-card:nth-child(1) { transition-delay: 0.05s; }
-.feature-card:nth-child(2) { transition-delay: 0.1s; }
-.feature-card:nth-child(3) { transition-delay: 0.15s; }
-.feature-card:nth-child(4) { transition-delay: 0.2s; }
-.feature-card:nth-child(5) { transition-delay: 0.25s; }
-.feature-card:nth-child(6) { transition-delay: 0.3s; }
-
-.feature-card .feature-icon {
-    transition: all 0.3s ease;
-}
-
-.feature-card:hover .feature-icon {
-    background: rgba(200, 169, 81, 0.15);
-    transform: scale(1.1) rotate(5deg);
-}
-
-/* Location cards animation */
-.loc-card {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.loc-card.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.loc-card:nth-child(1) { transition-delay: 0.1s; }
-.loc-card:nth-child(2) { transition-delay: 0.2s; }
-.loc-card:nth-child(3) { transition-delay: 0.3s; }
-
-.map-container {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s;
-}
-
-.map-container.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ============================================
-   GALLERY LIGHTBOX
-   ============================================ */
-.gallery-item {
-    cursor: pointer;
-    position: relative;
-}
-
-.gallery-item::after {
-    content: '🔍 View';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    opacity: 0;
-    transition: all 0.3s ease;
-    pointer-events: none;
-}
-
-.gallery-item:hover::after {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-/* See More Button */
-.gallery-actions {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.see-more-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 36px;
-    background: transparent;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 3px;
-}
-
-.see-more-btn:hover {
-    background: var(--accent);
-    color: var(--dark);
-}
-
-.see-more-btn svg {
-    width: 16px;
-    height: 16px;
-    transition: transform 0.3s ease;
-}
-
-.see-more-btn:hover svg {
-    transform: rotate(180deg);
-}
-
-/* Hidden gallery items */
-.gallery-item.hidden {
-    display: none;
-}
-
-.gallery-item.hidden.show {
-    display: block;
-    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Lightbox Overlay */
-.lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.lightbox.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.lightbox-content {
-    position: relative;
-    max-width: 90%;
-    max-height: 85%;
-    transform: scale(0.9);
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.lightbox.active .lightbox-content {
-    transform: scale(1);
-}
-
-.lightbox-content img {
-    max-width: 100%;
-    max-height: 85vh;
-    object-fit: contain;
-    border-radius: 4px;
-}
-
-.lightbox-close {
-    position: absolute;
-    top: -50px;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 50%;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.lightbox-close:hover {
-    background: var(--accent);
-    color: var(--dark);
-    transform: rotate(90deg);
-}
-
-.lightbox-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 50%;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.lightbox-nav:hover {
-    background: var(--accent);
-    color: var(--dark);
-}
-
-.lightbox-prev {
-    left: -70px;
-}
-
-.lightbox-next {
-    right: -70px;
-}
-
-.lightbox-caption {
-    text-align: center;
-    color: var(--text-gray);
-    margin-top: 15px;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-}
-
-.lightbox-counter {
-    position: absolute;
-    top: -50px;
-    left: 0;
-    color: var(--text-gray);
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-}
-
-/* Mobile lightbox adjustments */
-@media (max-width: 768px) {
-    .lightbox-nav {
-        width: 40px;
-        height: 40px;
-    }
-
-    .lightbox-prev {
-        left: 10px;
-    }
-
-    .lightbox-next {
-        right: 10px;
-    }
-
-    .lightbox-close {
-        top: 10px;
-        right: 10px;
-        position: fixed;
-    }
-
-    .lightbox-counter {
-        top: 20px;
-        left: 20px;
-        position: fixed;
-    }
-
-    .lightbox-content {
-        max-width: 95%;
-    }
-}
-
-/* ============================================
-   SCROLL PROGRESS INDICATOR (BONUS)
-   ============================================ */
-.scroll-progress {
-    position: fixed;
-    top: 56px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent), var(--accent-hover));
-    z-index: 9999;
-    transition: width 0.1s ease;
-}
+           CURRENCY CONVERTER
+           ============================================ */
+        .currency-converted {
+            font-size: 0.88rem;
+            color: var(--text-gray);
+            font-weight: 500;
+            margin-top: -10px;
+            margin-bottom: 30px;
+            font-family: 'Barlow', sans-serif;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .currency-converted .flag {
+            font-size: 1rem;
+        }
+
+        .currency-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            background: rgba(200, 169, 81, 0.1);
+            border: 1px solid rgba(200, 169, 81, 0.2);
+            border-radius: 3px;
+            font-size: 0.65rem;
+            color: var(--accent);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-left: 8px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+        }
+
+        .currency-selector {
+            margin-top: 8px;
+        }
+
+        .currency-selector select {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: var(--text-gray);
+            padding: 6px 12px;
+            font-family: 'Barlow', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            border-radius: 3px;
+            cursor: pointer;
+            outline: none;
+            transition: border-color 0.3s ease;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .currency-selector select:hover,
+        .currency-selector select:focus {
+            border-color: var(--accent);
+        }
+
+        .currency-selector select option {
+            background: var(--dark-2);
+            color: var(--text-white);
+        }
+
+        /* ============================================
+           ROI CALCULATOR
+           ============================================ */
+        .roi-section {
+            padding: 80px 24px;
+            background: linear-gradient(180deg, var(--dark) 0%, var(--brand-color) 50%, var(--dark) 100%);
+        }
+
+        .roi-subtitle {
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            font-weight: 400;
+            max-width: 500px;
+            margin: -15px auto 50px;
+            font-family: 'Barlow', sans-serif;
+        }
+
+        .roi-calculator {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 40px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .roi-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .roi-field label {
+            display: block;
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-gray);
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+
+        .roi-input-wrapper {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 0 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        .roi-input-wrapper:focus-within {
+            border-color: var(--accent);
+        }
+
+        .roi-prefix {
+            color: var(--accent);
+            font-weight: 800;
+            font-size: 1rem;
+            margin-right: 8px;
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+
+        .roi-input-wrapper input {
+            background: transparent;
+            border: none;
+            color: var(--text-white);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 14px 0;
+            width: 100%;
+            outline: none;
+        }
+
+        .roi-input-wrapper input[readonly] {
+            color: var(--text-gray);
+        }
+
+        .roi-editable {
+            cursor: text;
+        }
+
+        .roi-slider-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .roi-slider {
+            flex: 1;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 3px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .roi-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--accent);
+            cursor: pointer;
+            border: 3px solid var(--dark);
+            box-shadow: 0 0 10px rgba(200,169,81,0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .roi-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        .roi-slider::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--accent);
+            cursor: pointer;
+            border: 3px solid var(--dark);
+        }
+
+        .roi-rate-display {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--accent);
+            min-width: 65px;
+            text-align: right;
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+
+        .roi-results {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .roi-result-card {
+            padding: 20px 24px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .roi-result-card.main {
+            background: rgba(200, 169, 81, 0.08);
+            border-color: rgba(200, 169, 81, 0.2);
+            padding: 25px 24px;
+        }
+
+        .roi-result-card:hover {
+            background: rgba(255,255,255,0.04);
+        }
+
+        .roi-result-label {
+            font-size: 0.78rem;
+            color: var(--text-gray);
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-family: 'Barlow', sans-serif;
+        }
+
+        .roi-result-value {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.3rem;
+            color: var(--text-white);
+            font-weight: 800;
+        }
+
+        .roi-result-value.accent {
+            color: var(--accent);
+            font-size: 1.6rem;
+        }
+
+        .roi-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 16px 30px;
+            background: var(--accent);
+            color: var(--dark);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            margin-top: 5px;
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+
+        .roi-cta:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .roi-disclaimer {
+            text-align: center;
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.2);
+            margin-top: 30px;
+            line-height: 1.6;
+            font-style: italic;
+            font-family: 'Barlow', sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .roi-calculator {
+                grid-template-columns: 1fr;
+                padding: 25px 20px;
+                gap: 30px;
+            }
+
+            .roi-result-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+
+        /* ============================================
+           MOBILE PERFORMANCE FIXES
+           ============================================ */
+        a, button, select, input {
+            touch-action: manipulation;
+        }
+
+        @media (max-width: 768px) {
+            .hero-cta,
+            .agent-btn,
+            .final-btn,
+            .top-bar-cta,
+            .mid-cta a,
+            .roi-cta {
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .whatsapp-float {
+                width: 56px;
+                height: 56px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .gallery-item img,
+            .hero-img {
+                image-rendering: -webkit-optimize-contrast;
+            }
+
+            .mobile-sticky-cta {
+                display: flex;
+            }
+
+            .whatsapp-float {
+                display: none;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-sticky-cta {
+                display: none;
+            }
+        }
+
+        .mobile-sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            display: none;
+            background: var(--dark);
+            border-top: 1px solid rgba(200, 169, 81, 0.15);
+            padding: 10px 15px;
+            gap: 10px;
+        }
+
+        .mobile-sticky-cta a {
+            flex: 1;
+            padding: 14px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+
+        .mobile-sticky-cta .mobile-wa {
+            background: var(--whatsapp);
+            color: white;
+        }
+
+        .mobile-sticky-cta .mobile-call {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .mobile-sticky-cta .mobile-wa svg,
+        .mobile-sticky-cta .mobile-call svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* ============================================
+           ENHANCED ANIMATIONS
+           ============================================ */
+        .info-value {
+            transition: all 0.3s ease;
+        }
+
+        .info-value.counting {
+            color: #fff;
+            text-shadow: 0 0 20px rgba(200, 169, 81, 0.8);
+        }
+
+        .info-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .info-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .info-item:nth-child(1) { transition-delay: 0.1s; }
+        .info-item:nth-child(2) { transition-delay: 0.2s; }
+        .info-item:nth-child(3) { transition-delay: 0.3s; }
+        .info-item:nth-child(4) { transition-delay: 0.4s; }
+
+        .description .section-tag {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .description .section-title {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+        }
+
+        .description .desc-text {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .description .desc-text:nth-of-type(1) { transition-delay: 0.4s; }
+        .description .desc-text:nth-of-type(2) { transition-delay: 0.6s; }
+
+        .description.in-view .section-tag,
+        .description.in-view .section-title,
+        .description.in-view .desc-text {
+            opacity: 1;
+            transform: translateX(0) translateY(0);
+        }
+
+        .feature-card {
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .feature-card.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .feature-card:nth-child(1) { transition-delay: 0.05s; }
+        .feature-card:nth-child(2) { transition-delay: 0.1s; }
+        .feature-card:nth-child(3) { transition-delay: 0.15s; }
+        .feature-card:nth-child(4) { transition-delay: 0.2s; }
+        .feature-card:nth-child(5) { transition-delay: 0.25s; }
+        .feature-card:nth-child(6) { transition-delay: 0.3s; }
+
+        .feature-card .feature-icon {
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            background: rgba(200, 169, 81, 0.15);
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .loc-card {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .loc-card.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .loc-card:nth-child(1) { transition-delay: 0.1s; }
+        .loc-card:nth-child(2) { transition-delay: 0.2s; }
+        .loc-card:nth-child(3) { transition-delay: 0.3s; }
+
+        .map-container {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s;
+        }
+
+        .map-container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================
+           GALLERY LIGHTBOX — FIX 4: Proper image display
+           ============================================ */
+
+        /* FIX 5: See More — hidden items properly hidden and shown */
+        .gallery-item.hidden {
+            display: none;
+        }
+
+        .gallery-item.hidden.show {
+            display: block !important;
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Gallery actions */
+        .gallery-actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .see-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 36px;
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .see-more-btn:hover {
+            background: var(--accent);
+            color: var(--dark);
+        }
+
+        .see-more-btn svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        /* Lightbox Overlay — FIX 4: correct sizing and display */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 90vw;
+            max-height: 90vh;
+            transform: scale(0.9);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .lightbox.active .lightbox-content {
+            transform: scale(1);
+        }
+
+        /* FIX 4: Image must display properly — block, constrained correctly */
+        #lightboxImg {
+            display: block;
+            max-width: 90vw;
+            max-height: 80vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 4px;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-close:hover {
+            background: var(--accent);
+            color: var(--dark);
+            transform: rotate(90deg);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+
+        .lightbox-nav:hover {
+            background: var(--accent);
+            color: var(--dark);
+        }
+
+        .lightbox-prev {
+            left: -70px;
+        }
+
+        .lightbox-next {
+            right: -70px;
+        }
+
+        .lightbox-caption {
+            text-align: center;
+            color: var(--text-gray);
+            margin-top: 15px;
+            font-size: 0.88rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+        }
+
+        .lightbox-counter {
+            position: absolute;
+            top: -50px;
+            left: 0;
+            color: var(--text-gray);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .lightbox-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .lightbox-prev {
+                left: 10px;
+            }
+
+            .lightbox-next {
+                right: 10px;
+            }
+
+            .lightbox-close {
+                top: 10px;
+                right: 10px;
+                position: fixed;
+            }
+
+            .lightbox-counter {
+                top: 20px;
+                left: 20px;
+                position: fixed;
+            }
+
+            .lightbox-content {
+                max-width: 95vw;
+            }
+
+            #lightboxImg {
+                max-width: 95vw;
+                max-height: 75vh;
+            }
+        }
+
+        /* ============================================
+           SCROLL PROGRESS INDICATOR
+           ============================================ */
+        .scroll-progress {
+            position: fixed;
+            top: 56px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
     </style>
 </head>
 <body>
@@ -1803,22 +1828,18 @@ a, button, select, input {
          CUSTOMIZE: Image, title, location, price, stats
          ============================================ -->
     <section class="hero">
-        <!-- CHANGE THIS IMAGE: Use the property's best exterior photo -->
         <img class="hero-img" src="images/exterior.jpeg" alt="Luxury Mansion Banana Island Lagos" loading="lazy" decoding="async">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-tag">Exclusive Listing</div>
-            <!-- CHANGE: Property title -->
             <h1 class="hero-title">5 Bedroom Ultra-Luxury Mansion</h1>
-            <!-- CHANGE: Location -->
             <div class="hero-location">
                 <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 Banana Island, Ikoyi, Lagos
             </div>
-            <!-- CHANGE: Price -->
-<div class="hero-price" id="hero-price">₦4,500,000,000</div>
-<div class="currency-converted" id="convertedPrice"></div>
-            <!-- CHANGE: Key stats -->
+            <!-- FIX 2: hero-price is the live element updated by showConvertedPrice() -->
+            <div class="hero-price" id="hero-price">&#8358;4,500,000,000</div>
+            <div class="currency-converted" id="convertedPrice"></div>
             <div class="hero-stats">
                 <div class="hero-stat">
                     <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
@@ -1878,7 +1899,6 @@ a, button, select, input {
         <div class="container">
             <span class="section-tag fade-up">About This Property</span>
             <h2 class="section-title fade-up">An Exceptional Residence on<br>Africa's Most <em>Prestigious</em> Island</h2>
-            <!-- CHANGE: Write the actual property description -->
             <p class="desc-text fade-up">
                 This fully detached five-bedroom mansion sits on one of the most coveted plots on Banana Island, offering panoramic views of the Lagos Lagoon. Built to the highest international standards, this residence combines contemporary architecture with timeless luxury finishes throughout.
             </p>
@@ -1955,78 +1975,78 @@ a, button, select, input {
         </div>
     </section>
 
-  <!-- ============================================
-     GALLERY
-     ============================================ -->
-<section class="gallery">
-    <div class="container">
-        <span class="section-tag fade-up">Gallery</span>
-        <h2 class="section-title fade-up">A Visual <em>Tour</em></h2>
-    </div>
-    <div class="gallery-grid" id="galleryGrid">
-        <!-- Visible Images -->
-        <div class="gallery-item wide fade-up" onclick="openLightbox(0)">
-            <img src="images/exterior.jpeg" alt="Exterior View" loading="lazy" decoding="async">
-            <div class="gallery-label">Grand Exterior</div>
+    <!-- ============================================
+         GALLERY
+         ============================================ -->
+    <section class="gallery">
+        <div class="container">
+            <span class="section-tag fade-up">Gallery</span>
+            <h2 class="section-title fade-up">A Visual <em>Tour</em></h2>
         </div>
-        <div class="gallery-item fade-up" onclick="openLightbox(1)">
-            <img src="images/living.jpeg" alt="Living Room" loading="lazy" decoding="async">
-            <div class="gallery-label">Living Room</div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox(2)">
-            <img src="images/pooll.jpeg" alt="Pool Area" loading="lazy" decoding="async">
-            <div class="gallery-label">Infinity Pool</div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox(3)">
-            <img src="images/2nd livingg 2.jpeg" alt="Living Room" loading="lazy" decoding="async">
-            <div class="gallery-label">Main Living Area</div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox(4)">
-            <img src="images/kitchen.jpeg" alt="Kitchen" loading="lazy" decoding="async">
-            <div class="gallery-label">Gourmet Kitchen</div>
-        </div>
-        <div class="gallery-item wide fade-up" onclick="openLightbox(5)">
-            <img src="images/nightlife.jpeg" alt="Night View" loading="lazy" decoding="async">
-            <div class="gallery-label">Evening Ambiance</div>
-        </div>
- <!-- See More Button -->
-    <div class="gallery-actions fade-up">
-        <button class="see-more-btn" id="seeMoreBtn" onclick="toggleGallery()">
-            <span id="seeMoreText">See More Photos</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-        </button>
-        <!-- Hidden Images (shown on "See More") -->
-        <div class="gallery-item hidden" onclick="openLightbox(6)">
-            <img src="images/bath sink.jpeg" alt="Bathroom" loading="lazy" decoding="async">
-            <div class="gallery-label">Luxury Bathroom</div>
-        </div>
-        <div class="gallery-item hidden" onclick="openLightbox(7)">
-            <img src="images/entry.jpeg" alt="Entry point" loading="lazy" decoding="async">
-            <div class="gallery-label">Entry</div>
-        </div>
-        <div class="gallery-item wide hidden" onclick="openLightbox(8)">
-            <img src="images/kitchn 2.jpeg" alt="Kitchen" loading="lazy" decoding="async">
-            <div class="gallery-label">Kitchen</div>
-        </div>
-        <div class="gallery-item hidden" onclick="openLightbox(9)">
-            <img src="images/pool sit.jpeg" alt="pool" loading="lazy" decoding="async">
-            <div class="gallery-label">Pool Sit</div>
-        </div>
-        <div class="gallery-item hidden" onclick="openLightbox(10)">
-            <img src="images/wardrobe (1).jpeg" alt="wardrobe" loading="lazy" decoding="async">
-            <div class="gallery-label">wardrobe</div>
-        </div>
-        <div class="gallery-item wide hidden" onclick="openLightbox(11)">
-            <img src="images/rooftop.jpeg" alt="Rooftop" loading="lazy" decoding="async">
-            <div class="gallery-label">Rooftop</div>
-        </div>
-    </div>
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Visible Images -->
+            <div class="gallery-item wide fade-up" onclick="openLightbox(0)">
+                <img src="images/exterior.jpeg" alt="Exterior View" loading="lazy" decoding="async">
+                <div class="gallery-label">Grand Exterior</div>
+            </div>
+            <div class="gallery-item fade-up" onclick="openLightbox(1)">
+                <img src="images/living.jpeg" alt="Living Room" loading="lazy" decoding="async">
+                <div class="gallery-label">Living Room</div>
+            </div>
+            <div class="gallery-item fade-up" onclick="openLightbox(2)">
+                <img src="images/pooll.jpeg" alt="Pool Area" loading="lazy" decoding="async">
+                <div class="gallery-label">Infinity Pool</div>
+            </div>
+            <div class="gallery-item fade-up" onclick="openLightbox(3)">
+                <img src="images/2nd livingg 2.jpeg" alt="Living Room" loading="lazy" decoding="async">
+                <div class="gallery-label">Main Living Area</div>
+            </div>
+            <div class="gallery-item fade-up" onclick="openLightbox(4)">
+                <img src="images/kitchen.jpeg" alt="Kitchen" loading="lazy" decoding="async">
+                <div class="gallery-label">Gourmet Kitchen</div>
+            </div>
+            <div class="gallery-item wide fade-up" onclick="openLightbox(5)">
+                <img src="images/nightlife.jpeg" alt="Night View" loading="lazy" decoding="async">
+                <div class="gallery-label">Evening Ambiance</div>
+            </div>
 
-   
-    </div>
-</section>
+            <!-- Hidden Images (shown on "See More") -->
+            <div class="gallery-item hidden" onclick="openLightbox(6)">
+                <img src="images/bath sink.jpeg" alt="Bathroom" loading="lazy" decoding="async">
+                <div class="gallery-label">Luxury Bathroom</div>
+            </div>
+            <div class="gallery-item hidden" onclick="openLightbox(7)">
+                <img src="images/entry.jpeg" alt="Entry point" loading="lazy" decoding="async">
+                <div class="gallery-label">Entry</div>
+            </div>
+            <div class="gallery-item wide hidden" onclick="openLightbox(8)">
+                <img src="images/kitchn 2.jpeg" alt="Kitchen" loading="lazy" decoding="async">
+                <div class="gallery-label">Kitchen</div>
+            </div>
+            <div class="gallery-item hidden" onclick="openLightbox(9)">
+                <img src="images/pool sit.jpeg" alt="pool" loading="lazy" decoding="async">
+                <div class="gallery-label">Pool Sit</div>
+            </div>
+            <div class="gallery-item hidden" onclick="openLightbox(10)">
+                <img src="images/wardrobe (1).jpeg" alt="wardrobe" loading="lazy" decoding="async">
+                <div class="gallery-label">wardrobe</div>
+            </div>
+            <div class="gallery-item wide hidden" onclick="openLightbox(11)">
+                <img src="images/rooftop.jpeg" alt="Rooftop" loading="lazy" decoding="async">
+                <div class="gallery-label">Rooftop</div>
+            </div>
+        </div>
+        <!-- See More Button -->
+        <div class="gallery-actions fade-up">
+            <button class="see-more-btn" id="seeMoreBtn" onclick="toggleGallery()">
+                <span id="seeMoreText">See More Photos</span>
+                <svg viewBox="0 0 24 24" id="seeMoreArrow">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+        </div>
+    </section>
+
     <!-- ============================================
          MID-PAGE CTA
          ============================================ -->
@@ -2077,10 +2097,8 @@ a, button, select, input {
         <div class="container">
             <span class="section-tag fade-up" style="text-align:center; display:block;">Your Advisor</span>
             <div class="agent-card fade-up">
-                <!-- CHANGE: Agent's actual photo -->
                 <img class="agent-photo" src="images/enny.jpg" alt="Agent Photo" loading="lazy" decoding="async">
                 <div class="agent-info">
-                    <!-- CHANGE: Agent's real name and title -->
                     <h3>Yusuf Eniola</h3>
                     <div class="agent-title-role">Senior Property Advisor — Kingsfield Realty</div>
                     <p>Specializing in ultra-luxury properties across Banana Island, Ikoyi, and Lekki Phase 1. Over 12 years of experience serving high-net-worth clients.</p>
@@ -2103,76 +2121,77 @@ a, button, select, input {
             </div>
         </div>
     </section>
+
     <!-- ============================================
-     ROI CALCULATOR
-     ============================================ -->
-<section class="roi-section">
-    <div class="container">
-        <span class="section-tag fade-up" style="text-align:center; display:block;">Investment Analysis</span>
-        <h2 class="section-title fade-up" style="text-align:center;">Calculate Your <em>Returns</em></h2>
-        <p class="roi-subtitle fade-up">Banana Island properties have historically appreciated 15-25% annually. Model your potential returns below.</p>
+         ROI CALCULATOR
+         ============================================ -->
+    <section class="roi-section">
+        <div class="container">
+            <span class="section-tag fade-up" style="text-align:center; display:block;">Investment Analysis</span>
+            <h2 class="section-title fade-up" style="text-align:center;">Calculate Your <em>Returns</em></h2>
+            <p class="roi-subtitle fade-up">Banana Island properties have historically appreciated 15-25% annually. Model your potential returns below.</p>
 
-        <div class="roi-calculator fade-up">
-            <div class="roi-inputs">
-                <div class="roi-field">
-                    <label>Purchase Price</label>
-                    <div class="roi-input-wrapper">
-                        <span class="roi-prefix">₦</span>
-                        <input type="text" id="roiPrice" value="4,500,000,000" readonly>
+            <div class="roi-calculator fade-up">
+                <div class="roi-inputs">
+                    <div class="roi-field">
+                        <label>Purchase Price</label>
+                        <div class="roi-input-wrapper">
+                            <span class="roi-prefix">&#8358;</span>
+                            <input type="text" id="roiPrice" value="4,500,000,000" readonly>
+                        </div>
+                    </div>
+                    <div class="roi-field">
+                        <label>Expected Annual Appreciation</label>
+                        <div class="roi-slider-group">
+                            <input type="range" id="roiRate" min="5" max="30" value="15" class="roi-slider">
+                            <span class="roi-rate-display" id="roiRateDisplay">15%</span>
+                        </div>
+                    </div>
+                    <div class="roi-field">
+                        <label>Holding Period</label>
+                        <div class="roi-slider-group">
+                            <input type="range" id="roiYears" min="1" max="15" value="5" class="roi-slider">
+                            <span class="roi-rate-display" id="roiYearsDisplay">5 years</span>
+                        </div>
+                    </div>
+                    <div class="roi-field">
+                        <label>Annual Rental Income (Optional)</label>
+                        <div class="roi-input-wrapper">
+                            <span class="roi-prefix">&#8358;</span>
+                            <input type="text" id="roiRent" value="150,000,000" class="roi-editable">
+                        </div>
                     </div>
                 </div>
-                <div class="roi-field">
-                    <label>Expected Annual Appreciation</label>
-                    <div class="roi-slider-group">
-                        <input type="range" id="roiRate" min="5" max="30" value="15" class="roi-slider">
-                        <span class="roi-rate-display" id="roiRateDisplay">15%</span>
+
+                <div class="roi-results">
+                    <div class="roi-result-card main">
+                        <div class="roi-result-label">Estimated Future Value</div>
+                        <div class="roi-result-value" id="roiFutureValue">&#8358;0</div>
                     </div>
-                </div>
-                <div class="roi-field">
-                    <label>Holding Period</label>
-                    <div class="roi-slider-group">
-                        <input type="range" id="roiYears" min="1" max="15" value="5" class="roi-slider">
-                        <span class="roi-rate-display" id="roiYearsDisplay">5 years</span>
+                    <div class="roi-result-card">
+                        <div class="roi-result-label">Total Appreciation</div>
+                        <div class="roi-result-value" id="roiAppreciation">&#8358;0</div>
                     </div>
-                </div>
-                <div class="roi-field">
-                    <label>Annual Rental Income (Optional)</label>
-                    <div class="roi-input-wrapper">
-                        <span class="roi-prefix">₦</span>
-                        <input type="text" id="roiRent" value="150,000,000" class="roi-editable">
+                    <div class="roi-result-card">
+                        <div class="roi-result-label">Total Rental Income</div>
+                        <div class="roi-result-value" id="roiRentalTotal">&#8358;0</div>
                     </div>
+                    <div class="roi-result-card">
+                        <div class="roi-result-label">Total ROI</div>
+                        <div class="roi-result-value accent" id="roiTotal">0%</div>
+                    </div>
+                    <a href="https://wa.me/2349137114631?text=Hi%2C%20I%20reviewed%20the%20ROI%20projections%20for%20the%20Banana%20Island%20property%20(Ref%3A%20BI-2025-001)%20and%20I%20am%20interested%20in%20discussing%20this%20as%20an%20investment.%20Can%20we%20talk%3F"
+                       class="roi-cta"
+                       target="_blank"
+                       onclick="trackClick('whatsapp-roi')">
+                        Discuss This Investment →
+                    </a>
                 </div>
             </div>
 
-            <div class="roi-results">
-                <div class="roi-result-card main">
-                    <div class="roi-result-label">Estimated Future Value</div>
-                    <div class="roi-result-value" id="roiFutureValue">₦0</div>
-                </div>
-                <div class="roi-result-card">
-                    <div class="roi-result-label">Total Appreciation</div>
-                    <div class="roi-result-value" id="roiAppreciation">₦0</div>
-                </div>
-                <div class="roi-result-card">
-                    <div class="roi-result-label">Total Rental Income</div>
-                    <div class="roi-result-value" id="roiRentalTotal">₦0</div>
-                </div>
-                <div class="roi-result-card">
-                    <div class="roi-result-label">Total ROI</div>
-                    <div class="roi-result-value accent" id="roiTotal">0%</div>
-                </div>
-                <a href="https://wa.me/2349137114631?text=Hi%2C%20I%20reviewed%20the%20ROI%20projections%20for%20the%20Banana%20Island%20property%20(Ref%3A%20BI-2025-001)%20and%20I%20am%20interested%20in%20discussing%20this%20as%20an%20investment.%20Can%20we%20talk%3F"
-                   class="roi-cta"
-                   target="_blank"
-                   onclick="trackClick('whatsapp-roi')">
-                    Discuss This Investment →
-                </a>
-            </div>
+            <p class="roi-disclaimer fade-up">*Projections are estimates based on historical Banana Island market data. Actual returns may vary. This does not constitute financial advice.</p>
         </div>
-
-        <p class="roi-disclaimer fade-up">*Projections are estimates based on historical Banana Island market data. Actual returns may vary. This does not constitute financial advice.</p>
-    </div>
-</section>
+    </section>
 
     <!-- ============================================
          FINAL CTA
@@ -2202,581 +2221,555 @@ a, button, select, input {
     <footer class="footer">
         <p>© 2026 Kingsfield Realty. All rights reserved.</p>
         <p>This listing is presented for qualified buyers only. Pricing subject to verification.</p>
-        <!-- THIS IS YOUR BRANDING — agents see you made it -->
         <p class="powered">Presented by <a href="#">YourBrandName</a></p>
     </footer>
 
+    <!-- MOBILE STICKY BAR — Only shows on phones -->
+    <div class="mobile-sticky-cta">
+        <a href="https://wa.me/2348012345678?text=Hi%2C%20I%20am%20interested%20in%20the%20Banana%20Island%20property%20(Ref%3A%20BI-2025-001)"
+           class="mobile-wa"
+           target="_blank"
+           onclick="trackClick('whatsapp-mobile-sticky')">
+            <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+            WhatsApp
+        </a>
+        <a href="tel:+2348012345678"
+           class="mobile-call"
+           onclick="trackClick('call-mobile-sticky')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call
+        </a>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">×</button>
+            <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">&#8249;</button>
+            <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">&#8250;</button>
+            <span class="lightbox-counter" id="lightboxCounter">1 / 6</span>
+            <img id="lightboxImg" src="" alt="Property Image">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- ============================================
          JAVASCRIPT
-         Simple, functional, nothing complex
          ============================================ -->
     <script>
     // ============================================
-// GLOBAL CURRENCY STATE
-// Whatever the user picks in the hero lives here
-// ============================================
-let activeCurrency = {
-    code: 'NGN',
-    symbol: '₦',
-    rate: 1,
-    flag: '🇳🇬',
-    name: 'Nigerian Naira'
-};
-
-// ============================================
-// 1. SCROLL ANIMATIONS
-// ============================================
-const fadeEls = document.querySelectorAll('.fade-up');
-const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, { threshold: 0.1 });
-fadeEls.forEach(el => fadeObserver.observe(el));
-
-// ============================================
-// 2. SIMPLE ANALYTICS
-// ============================================
-function getStats() {
-    const stats = localStorage.getItem('page_stats');
-    return stats ? JSON.parse(stats) : {
-        totalViews: 0,
-        waClicks: 0,
-        callClicks: 0,
-        dailyViews: {},
-        firstVisit: new Date().toISOString()
-    };
-}
-
-function saveStats(stats) {
-    localStorage.setItem('page_stats', JSON.stringify(stats));
-}
-
-function countView() {
-    const stats = getStats();
-    stats.totalViews++;
-    const today = new Date().toISOString().split('T')[0];
-    stats.dailyViews[today] = (stats.dailyViews[today] || 0) + 1;
-    saveStats(stats);
-}
-
-function trackClick(type) {
-    // Local tracking (existing)
-    const stats = getStats();
-    if (type.startsWith('whatsapp')) {
-        stats.waClicks++;
-    } else if (type.startsWith('call')) {
-        stats.callClicks++;
-    }
-    saveStats(stats);
-    updateBadge();
-
-    // ★ GOOGLE ANALYTICS TRACKING
-    if (typeof gtag === 'function') {
-        gtag('event', 'click', {
-            'event_category': 'Contact',
-            'event_label': type,
-            'value': 1
-        });
-    }
-}
-
-function checkAdmin() {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('admin') === 'true') {
-        document.getElementById('analyticsBadge').classList.add('visible');
-        updateBadge();
-    }
-}
-
-function updateBadge() {
-    const stats = getStats();
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('totalViews').textContent = stats.totalViews;
-    document.getElementById('waClicks').textContent = stats.waClicks;
-    document.getElementById('callClicks').textContent = stats.callClicks;
-    document.getElementById('todayViews').textContent = stats.dailyViews[today] || 0;
-}
-
-countView();
-checkAdmin();
-
-// ============================================
-// 3. CURRENCY CONVERTER — THE MAIN ENGINE
-// ============================================
-const NAIRA_PRICE = 4500000000;
-
-const CURRENCIES = {
-    NG: { code: 'NGN', symbol: '₦', rate: 1, flag: '🇳🇬', name: 'Nigerian Naira' },
-    US: { code: 'USD', symbol: '$', rate: 0.000625, flag: '🇺🇸', name: 'US Dollar' },
-    GB: { code: 'GBP', symbol: '£', rate: 0.0005, flag: '🇬🇧', name: 'British Pound' },
-    AE: { code: 'AED', symbol: 'AED ', rate: 0.002296, flag: '🇦🇪', name: 'UAE Dirham' },
-    EU: { code: 'EUR', symbol: '€', rate: 0.000574, flag: '🇪🇺', name: 'Euro' },
-    SA: { code: 'ZAR', symbol: 'R', rate: 0.01125, flag: '🇿🇦', name: 'South African Rand' },
-    GH: { code: 'GHS', symbol: 'GH₵', rate: 0.009375, flag: '🇬🇭', name: 'Ghanaian Cedi' },
-    CN: { code: 'CNY', symbol: '¥', rate: 0.004531, flag: '🇨🇳', name: 'Chinese Yuan' },
-    CA: { code: 'CAD', symbol: 'CA$', rate: 0.000856, flag: '🇨🇦', name: 'Canadian Dollar' },
-    IN: { code: 'INR', symbol: '₹', rate: 0.0527, flag: '🇮🇳', name: 'Indian Rupee' }
-};
-
-const EU_COUNTRIES = ['DE','FR','IT','ES','NL','BE','AT','PT','IE','FI','GR','LU','MT','CY','SK','SI','EE','LV','LT'];
-
-function formatCurrency(amount, symbol) {
-    if (amount >= 1000000000) {
-        return symbol + (amount / 1000000000).toFixed(2) + ' Billion';
-    } else if (amount >= 1000000) {
-        return symbol + (amount / 1000000).toFixed(2) + ' Million';
-    } else if (amount >= 1000) {
-        return symbol + Math.round(amount).toLocaleString();
-    }
-    return symbol + amount.toFixed(2);
-}
-
-function showConvertedPrice(countryCode) {
-    let currencyKey = countryCode;
-    if (EU_COUNTRIES.includes(countryCode)) currencyKey = 'EU';
-
-    const currency = CURRENCIES[currencyKey] || CURRENCIES['US'];
-    const converted = NAIRA_PRICE * currency.rate;
-    const container = document.getElementById('convertedPrice');
-
-    // ★ SET GLOBAL STATE — everything reads from this
-    activeCurrency = {
-        code: currency.code,
-        symbol: currency.symbol,
-        rate: currency.rate,
-        flag: currency.flag,
-        name: currency.name
+    // GLOBAL CURRENCY STATE
+    // ============================================
+    let activeCurrency = {
+        code: 'NGN',
+        symbol: '₦',
+        rate: 1,
+        flag: '🇳🇬',
+        name: 'Nigerian Naira'
     };
 
-    // ★ UPDATE THE BIG HERO PRICE
-    const heroEl = document.getElementById('heroPrice');
-    if (heroEl) {
-        heroEl.textContent = formatCurrency(converted, currency.symbol);
-    }
-
-    // Build the dropdown + subtitle
-    const dropdownHTML = `
-        <select onchange="showConvertedPrice(this.value)" id="currencySelect">
-            ${Object.entries(CURRENCIES).map(([key, val]) =>
-                `<option value="${key}" ${key === currencyKey ? 'selected' : ''}>${val.flag} ${val.name}</option>`
-            ).join('')}
-        </select>
-    `;
-
-    if (currencyKey === 'NG') {
-        container.innerHTML = `
-            <div class="currency-selector">
-                ${dropdownHTML}
-            </div>
-        `;
-    } else {
-        container.innerHTML = `
-            <span class="flag">${currency.flag}</span>
-            Approx. ${formatCurrency(converted, currency.symbol)}
-            <span class="currency-tag">Auto-detected</span>
-            <div class="currency-selector" style="margin-top:0; margin-left:5px;">
-                ${dropdownHTML}
-            </div>
-        `;
-    }
-
-    // ★ UPDATE ALL ₦ PREFIX SYMBOLS IN ROI
-    document.querySelectorAll('.roi-prefix').forEach(el => {
-        el.textContent = currency.symbol;
-    });
-
-    // ★ RECALCULATE ROI IN NEW CURRENCY
-    calculateROI();
-}
-
-// Detect country on load
-fetch('https://ipapi.co/json/')
-    .then(r => r.json())
-    .then(data => {
-        showConvertedPrice(data.country_code || 'US');
-    })
-    .catch(() => {
-        showConvertedPrice('US');
-    });
-
-// ============================================
-// 4. SMART WHATSAPP TIMESTAMPS
-// ============================================
-document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-        const now = new Date();
-        const timeStr = now.toLocaleString('en-NG', {
-            dateStyle: 'medium',
-            timeStyle: 'short'
-        });
-        const currentHref = this.getAttribute('href');
-        const separator = currentHref.includes('?text=') ? '%0A%0A' : '?text=';
-        const timeParam = separator + '%5BEnquiry%20sent%20' + encodeURIComponent(timeStr) + '%5D';
-
-        if (!currentHref.includes('Enquiry%20sent')) {
-            this.setAttribute('href', currentHref + timeParam);
-        }
-    });
-});
-
-// ============================================
-// 5. ROI CALCULATOR — NOW CURRENCY-AWARE
-// ============================================
-const roiPrice = 4500000000; // Always stored in Naira internally
-
-// ★ THIS NOW CONVERTS TO WHATEVER CURRENCY IS ACTIVE
-function formatNaira(num) {
-    const converted = num * activeCurrency.rate;
-    const sym = activeCurrency.symbol;
-
-    if (converted >= 1000000000) {
-        return sym + (converted / 1000000000).toFixed(2) + ' Billion';
-    } else if (converted >= 1000000) {
-        return sym + (converted / 1000000).toFixed(2) + ' Million';
-    } else if (converted >= 1000) {
-        return sym + Math.round(converted).toLocaleString();
-    }
-    return sym + converted.toFixed(2);
-}
-
-function calculateROI() {
-    const rate = parseInt(document.getElementById('roiRate').value) / 100;
-    const years = parseInt(document.getElementById('roiYears').value);
-    const rentInput = document.getElementById('roiRent').value.replace(/[^0-9]/g, '');
-    const annualRent = parseInt(rentInput) || 0;
-
-    // Update slider labels
-    document.getElementById('roiRateDisplay').textContent = Math.round(rate * 100) + '%';
-    document.getElementById('roiYearsDisplay').textContent = years + (years === 1 ? ' year' : ' years');
-
-    // All math in Naira (internal)
-    const futureValue = roiPrice * Math.pow(1 + rate, years);
-    const appreciation = futureValue - roiPrice;
-    const totalRental = annualRent * years;
-    const totalReturn = ((appreciation + totalRental) / roiPrice) * 100;
-
-    // ★ DISPLAY IN ACTIVE CURRENCY (formatNaira auto-converts)
-    document.getElementById('roiFutureValue').textContent = formatNaira(futureValue);
-    document.getElementById('roiAppreciation').textContent = formatNaira(appreciation);
-    document.getElementById('roiRentalTotal').textContent = formatNaira(totalRental);
-    document.getElementById('roiTotal').textContent = totalReturn.toFixed(1) + '%';
-
-    // ★ UPDATE PURCHASE PRICE TO ACTIVE CURRENCY
-    const convertedPrice = roiPrice * activeCurrency.rate;
-    if (convertedPrice >= 1000000000) {
-        document.getElementById('roiPrice').value = (convertedPrice / 1000000000).toFixed(2) + ' Billion';
-    } else if (convertedPrice >= 1000000) {
-        document.getElementById('roiPrice').value = (convertedPrice / 1000000).toFixed(2) + ' Million';
-    } else {
-        document.getElementById('roiPrice').value = Math.round(convertedPrice).toLocaleString();
-    }
-
-    // ★ UPDATE RENTAL INPUT PREFIX
-    document.querySelectorAll('.roi-prefix').forEach(el => {
-        el.textContent = activeCurrency.symbol;
-    });
-
-    // Pulse animation
-    document.querySelectorAll('.roi-result-value').forEach(el => {
-        el.style.transition = 'none';
-        el.style.transform = 'scale(1.05)';
-        setTimeout(() => {
-            el.style.transition = 'transform 0.3s ease';
-            el.style.transform = 'scale(1)';
-        }, 50);
-    });
-}
-
-// Slider listeners
-document.getElementById('roiRate').addEventListener('input', calculateROI);
-document.getElementById('roiYears').addEventListener('input', calculateROI);
-document.getElementById('roiRent').addEventListener('input', function() {
-    let val = this.value.replace(/[^0-9]/g, '');
-    if (val) {
-        this.value = parseInt(val).toLocaleString();
-    }
-    calculateROI();
-});
-
-// Initial calculation
-calculateROI();
-// ============================================
-// 6. ENHANCED SCROLL ANIMATIONS
-// ============================================
-
-// Info bar number counting animation
-function animateNumbers() {
-    const infoItems = document.querySelectorAll('.info-item');
-    const infoObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-
-                // Animate the number
-                const valueEl = entry.target.querySelector('.info-value');
-                if (valueEl && !valueEl.classList.contains('counted')) {
-                    valueEl.classList.add('counted', 'counting');
-                    const finalValue = valueEl.textContent;
-                    const numericValue = parseInt(finalValue.replace(/[^0-9]/g, ''));
-
-                    if (!isNaN(numericValue)) {
-                        let current = 0;
-                        const increment = numericValue / 40;
-                        const timer = setInterval(() => {
-                            current += increment;
-                            if (current >= numericValue) {
-                                valueEl.textContent = finalValue;
-                                valueEl.classList.remove('counting');
-                                clearInterval(timer);
-                            } else {
-                                valueEl.textContent = Math.floor(current).toLocaleString();
-                            }
-                        }, 30);
-                    }
-                }
-            }
-        });
-    }, { threshold: 0.3 });
-
-    infoItems.forEach(item => infoObserver.observe(item));
-}
-
-// About section entrance animation
-function animateAbout() {
-    const descSection = document.querySelector('.description');
-    const descObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-            }
-        });
-    }, { threshold: 0.2 });
-
-    if (descSection) {
-        descObserver.observe(descSection);
-    }
-}
-
-// Feature cards staggered animation
-function animateFeatures() {
-    const featureCards = document.querySelectorAll('.feature-card');
-    const featureObserver = new IntersectionObserver((entries) => {
+    // ============================================
+    // 1. SCROLL ANIMATIONS
+    // ============================================
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const fadeObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
         });
     }, { threshold: 0.1 });
+    fadeEls.forEach(el => fadeObserver.observe(el));
 
-    featureCards.forEach(card => featureObserver.observe(card));
-}
+    // ============================================
+    // 2. SIMPLE ANALYTICS
+    // ============================================
+    function getStats() {
+        const stats = localStorage.getItem('page_stats');
+        return stats ? JSON.parse(stats) : {
+            totalViews: 0,
+            waClicks: 0,
+            callClicks: 0,
+            dailyViews: {},
+            firstVisit: new Date().toISOString()
+        };
+    }
 
-// Location cards animation
-function animateLocation() {
-    const locCards = document.querySelectorAll('.loc-card');
-    const mapContainer = document.querySelector('.map-container');
+    function saveStats(stats) {
+        localStorage.setItem('page_stats', JSON.stringify(stats));
+    }
 
-    const locObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.2 });
+    function countView() {
+        const stats = getStats();
+        stats.totalViews++;
+        const today = new Date().toISOString().split('T')[0];
+        stats.dailyViews[today] = (stats.dailyViews[today] || 0) + 1;
+        saveStats(stats);
+    }
 
-    locCards.forEach(card => locObserver.observe(card));
-    if (mapContainer) locObserver.observe(mapContainer);
-}
+    function trackClick(type) {
+        const stats = getStats();
+        if (type.startsWith('whatsapp')) {
+            stats.waClicks++;
+        } else if (type.startsWith('call')) {
+            stats.callClicks++;
+        }
+        saveStats(stats);
+        updateBadge();
 
-// Scroll progress indicator
-function initScrollProgress() {
-    const progressBar = document.getElementById('scrollProgress');
-    if (!progressBar) return;
-
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = (scrollTop / docHeight) * 100;
-        progressBar.style.width = progress + '%';
-    });
-}
-
-// Initialize all animations
-animateNumbers();
-animateAbout();
-animateFeatures();
-animateLocation();
-initScrollProgress();
-
-// ============================================
-// 7. GALLERY LIGHTBOX
-// ============================================
-
-const galleryImages = [];
-let currentImageIndex = 0;
-
-// Build gallery array from all images
-function initGallery() {
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    galleryItems.forEach((item, index) => {
-        const img = item.querySelector('img');
-        const label = item.querySelector('.gallery-label');
-        if (img) {
-            galleryImages.push({
-                src: img.src.replace('w=800', 'w=1600').replace('w=1200', 'w=1600'),
-                caption: label ? label.textContent : ''
+        if (typeof gtag === 'function') {
+            gtag('event', 'click', {
+                'event_category': 'Contact',
+                'event_label': type,
+                'value': 1
             });
         }
+    }
+
+    function checkAdmin() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('admin') === 'true') {
+            document.getElementById('analyticsBadge').classList.add('visible');
+            updateBadge();
+        }
+    }
+
+    function updateBadge() {
+        const stats = getStats();
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('totalViews').textContent = stats.totalViews;
+        document.getElementById('waClicks').textContent = stats.waClicks;
+        document.getElementById('callClicks').textContent = stats.callClicks;
+        document.getElementById('todayViews').textContent = stats.dailyViews[today] || 0;
+    }
+
+    countView();
+    checkAdmin();
+
+    // ============================================
+    // 3. CURRENCY CONVERTER
+    // ============================================
+    const NAIRA_PRICE = 4500000000;
+
+    const CURRENCIES = {
+        NG: { code: 'NGN', symbol: '₦', rate: 1, flag: '🇳🇬', name: 'Nigerian Naira' },
+        US: { code: 'USD', symbol: '$', rate: 0.000625, flag: '🇺🇸', name: 'US Dollar' },
+        GB: { code: 'GBP', symbol: '£', rate: 0.0005, flag: '🇬🇧', name: 'British Pound' },
+        AE: { code: 'AED', symbol: 'AED ', rate: 0.002296, flag: '🇦🇪', name: 'UAE Dirham' },
+        EU: { code: 'EUR', symbol: '€', rate: 0.000574, flag: '🇪🇺', name: 'Euro' },
+        SA: { code: 'ZAR', symbol: 'R', rate: 0.01125, flag: '🇿🇦', name: 'South African Rand' },
+        GH: { code: 'GHS', symbol: 'GH₵', rate: 0.009375, flag: '🇬🇭', name: 'Ghanaian Cedi' },
+        CN: { code: 'CNY', symbol: '¥', rate: 0.004531, flag: '🇨🇳', name: 'Chinese Yuan' },
+        CA: { code: 'CAD', symbol: 'CA$', rate: 0.000856, flag: '🇨🇦', name: 'Canadian Dollar' },
+        IN: { code: 'INR', symbol: '₹', rate: 0.0527, flag: '🇮🇳', name: 'Indian Rupee' }
+    };
+
+    const EU_COUNTRIES = ['DE','FR','IT','ES','NL','BE','AT','PT','IE','FI','GR','LU','MT','CY','SK','SI','EE','LV','LT'];
+
+    function formatCurrency(amount, symbol) {
+        if (amount >= 1000000000) {
+            return symbol + (amount / 1000000000).toFixed(2) + ' Billion';
+        } else if (amount >= 1000000) {
+            return symbol + (amount / 1000000).toFixed(2) + ' Million';
+        } else if (amount >= 1000) {
+            return symbol + Math.round(amount).toLocaleString();
+        }
+        return symbol + amount.toFixed(2);
+    }
+
+    function showConvertedPrice(countryCode) {
+        let currencyKey = countryCode;
+        if (EU_COUNTRIES.includes(countryCode)) currencyKey = 'EU';
+
+        const currency = CURRENCIES[currencyKey] || CURRENCIES['US'];
+        const converted = NAIRA_PRICE * currency.rate;
+        const container = document.getElementById('convertedPrice');
+
+        // Set global state
+        activeCurrency = {
+            code: currency.code,
+            symbol: currency.symbol,
+            rate: currency.rate,
+            flag: currency.flag,
+            name: currency.name
+        };
+
+        // FIX 2: Update the BIG HERO PRICE to the selected currency
+        const heroPrice = document.getElementById('hero-price');
+        if (heroPrice) {
+            heroPrice.textContent = formatCurrency(converted, currency.symbol);
+        }
+
+        // Build dropdown for the subtitle line
+        const dropdownHTML = `
+            <select onchange="showConvertedPrice(this.value)" id="currencySelect">
+                ${Object.entries(CURRENCIES).map(([key, val]) =>
+                    `<option value="${key}" ${key === currencyKey ? 'selected' : ''}>${val.flag} ${val.name}</option>`
+                ).join('')}
+            </select>
+        `;
+
+        if (currencyKey === 'NG') {
+            container.innerHTML = `<div class="currency-selector">${dropdownHTML}</div>`;
+        } else {
+            container.innerHTML = `
+                <span class="flag">${currency.flag}</span>
+                Approx. ${formatCurrency(converted, currency.symbol)}
+                <span class="currency-tag">Auto-detected</span>
+                <div class="currency-selector" style="margin-top:0; margin-left:5px;">
+                    ${dropdownHTML}
+                </div>
+            `;
+        }
+
+        // Update all currency prefix symbols in ROI
+        document.querySelectorAll('.roi-prefix').forEach(el => {
+            el.textContent = currency.symbol;
+        });
+
+        // Recalculate ROI in new currency
+        calculateROI();
+    }
+
+    // Detect country on load
+    fetch('https://ipapi.co/json/')
+        .then(r => r.json())
+        .then(data => {
+            showConvertedPrice(data.country_code || 'US');
+        })
+        .catch(() => {
+            showConvertedPrice('US');
+        });
+
+    // ============================================
+    // 4. SMART WHATSAPP TIMESTAMPS
+    // ============================================
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const now = new Date();
+            const timeStr = now.toLocaleString('en-NG', {
+                dateStyle: 'medium',
+                timeStyle: 'short'
+            });
+            const currentHref = this.getAttribute('href');
+            const separator = currentHref.includes('?text=') ? '%0A%0A' : '?text=';
+            const timeParam = separator + '%5BEnquiry%20sent%20' + encodeURIComponent(timeStr) + '%5D';
+
+            if (!currentHref.includes('Enquiry%20sent')) {
+                this.setAttribute('href', currentHref + timeParam);
+            }
+        });
     });
-}
 
-function openLightbox(index) {
-    currentImageIndex = index;
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxCaption = document.getElementById('lightboxCaption');
-    const lightboxCounter = document.getElementById('lightboxCounter');
+    // ============================================
+    // 5. ROI CALCULATOR — CURRENCY-AWARE
+    // ============================================
+    const roiPrice = 4500000000;
 
-    lightboxImg.src = galleryImages[index].src;
-    lightboxCaption.textContent = galleryImages[index].caption;
-    lightboxCounter.textContent = `${index + 1} / ${galleryImages.length}`;
+    function formatNaira(num) {
+        const converted = num * activeCurrency.rate;
+        const sym = activeCurrency.symbol;
 
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
-}
-
-function navigateLightbox(direction) {
-    currentImageIndex += direction;
-
-    if (currentImageIndex >= galleryImages.length) {
-        currentImageIndex = 0;
-    } else if (currentImageIndex < 0) {
-        currentImageIndex = galleryImages.length - 1;
+        if (converted >= 1000000000) {
+            return sym + (converted / 1000000000).toFixed(2) + ' Billion';
+        } else if (converted >= 1000000) {
+            return sym + (converted / 1000000).toFixed(2) + ' Million';
+        } else if (converted >= 1000) {
+            return sym + Math.round(converted).toLocaleString();
+        }
+        return sym + converted.toFixed(2);
     }
 
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxCaption = document.getElementById('lightboxCaption');
-    const lightboxCounter = document.getElementById('lightboxCounter');
+    function calculateROI() {
+        const rate = parseInt(document.getElementById('roiRate').value) / 100;
+        const years = parseInt(document.getElementById('roiYears').value);
+        const rentInput = document.getElementById('roiRent').value.replace(/[^0-9]/g, '');
+        const annualRent = parseInt(rentInput) || 0;
 
-    // Fade out
-    lightboxImg.style.opacity = '0';
-    lightboxImg.style.transform = 'scale(0.95)';
+        document.getElementById('roiRateDisplay').textContent = Math.round(rate * 100) + '%';
+        document.getElementById('roiYearsDisplay').textContent = years + (years === 1 ? ' year' : ' years');
 
-    setTimeout(() => {
-        lightboxImg.src = galleryImages[currentImageIndex].src;
-        lightboxCaption.textContent = galleryImages[currentImageIndex].caption;
-        lightboxCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+        const futureValue = roiPrice * Math.pow(1 + rate, years);
+        const appreciation = futureValue - roiPrice;
+        const totalRental = annualRent * years;
+        const totalReturn = ((appreciation + totalRental) / roiPrice) * 100;
 
-        // Fade in
-        lightboxImg.style.opacity = '1';
-        lightboxImg.style.transform = 'scale(1)';
-    }, 200);
-}
+        document.getElementById('roiFutureValue').textContent = formatNaira(futureValue);
+        document.getElementById('roiAppreciation').textContent = formatNaira(appreciation);
+        document.getElementById('roiRentalTotal').textContent = formatNaira(totalRental);
+        document.getElementById('roiTotal').textContent = totalReturn.toFixed(1) + '%';
 
-// Keyboard navigation
-document.addEventListener('keydown', (e) => {
-    const lightbox = document.getElementById('lightbox');
-    if (!lightbox.classList.contains('active')) return;
+        const convertedPrice = roiPrice * activeCurrency.rate;
+        if (convertedPrice >= 1000000000) {
+            document.getElementById('roiPrice').value = (convertedPrice / 1000000000).toFixed(2) + ' Billion';
+        } else if (convertedPrice >= 1000000) {
+            document.getElementById('roiPrice').value = (convertedPrice / 1000000).toFixed(2) + ' Million';
+        } else {
+            document.getElementById('roiPrice').value = Math.round(convertedPrice).toLocaleString();
+        }
 
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') navigateLightbox(-1);
-    if (e.key === 'ArrowRight') navigateLightbox(1);
-});
+        document.querySelectorAll('.roi-prefix').forEach(el => {
+            el.textContent = activeCurrency.symbol;
+        });
 
-// Click outside to close
-document.getElementById('lightbox').addEventListener('click', (e) => {
-    if (e.target.id === 'lightbox') {
-        closeLightbox();
-    }
-});
-
-// Add transition to lightbox image
-document.getElementById('lightboxImg').style.transition = 'opacity 0.2s ease, transform 0.2s ease';
-
-// Initialize gallery
-initGallery();
-
-// ============================================
-// 8. SEE MORE GALLERY TOGGLE
-// ============================================
-
-let galleryExpanded = false;
-
-function toggleGallery() {
-    const hiddenItems = document.querySelectorAll('.gallery-item.hidden');
-    const btn = document.getElementById('seeMoreBtn');
-    const btnText = document.getElementById('seeMoreText');
-    const btnSvg = btn.querySelector('svg');
-
-    galleryExpanded = !galleryExpanded;
-
-    if (galleryExpanded) {
-        // Show hidden items with staggered animation
-        hiddenItems.forEach((item, index) => {
+        document.querySelectorAll('.roi-result-value').forEach(el => {
+            el.style.transition = 'none';
+            el.style.transform = 'scale(1.05)';
             setTimeout(() => {
-                item.classList.add('show');
-            }, index * 100);
-        });
-        btnText.textContent = 'Show Less';
-        btnSvg.style.transform = 'rotate(180deg)';
-    } else {
-        // Hide items
-        hiddenItems.forEach(item => {
-            item.classList.remove('show');
-        });
-        btnText.textContent = 'See More Photos';
-        btnSvg.style.transform = 'rotate(0deg)';
-
-        // Scroll back to gallery top
-        document.querySelector('.gallery').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+                el.style.transition = 'transform 0.3s ease';
+                el.style.transform = 'scale(1)';
+            }, 50);
         });
     }
 
-    // Re-initialize gallery array to include new images
-    galleryImages.length = 0;
-    initGallery();
-}
-    </script>
-    <!-- MOBILE STICKY BAR — Only shows on phones -->
-<div class="mobile-sticky-cta">
-    <a href="https://wa.me/2348012345678?text=Hi%2C%20I%20am%20interested%20in%20the%20Banana%20Island%20property%20(Ref%3A%20BI-2025-001)"
-       class="mobile-wa"
-       target="_blank"
-       onclick="trackClick('whatsapp-mobile-sticky')">
-        <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-        WhatsApp
-    </a>
-    <a href="tel:+2348012345678"
-       class="mobile-call"
-       onclick="trackClick('call-mobile-sticky')">
-        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        Call
-    </a>
-</div>
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-    <div class="lightbox-content">
-        <button class="lightbox-close" onclick="closeLightbox()">×</button>
-        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">‹</button>
-        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">›</button>
-        <span class="lightbox-counter" id="lightboxCounter">1 / 6</span>
-        <img id="lightboxImg" src="" alt="Property Image">
-        <div class="lightbox-caption" id="lightboxCaption"></div>
-    </div>
-</div>
+    document.getElementById('roiRate').addEventListener('input', calculateROI);
+    document.getElementById('roiYears').addEventListener('input', calculateROI);
+    document.getElementById('roiRent').addEventListener('input', function() {
+        let val = this.value.replace(/[^0-9]/g, '');
+        if (val) {
+            this.value = parseInt(val).toLocaleString();
+        }
+        calculateROI();
+    });
 
-<!-- SCROLL PROGRESS -->
-<div class="scroll-progress" id="scrollProgress"></div>
+    calculateROI();
+
+    // ============================================
+    // 6. ENHANCED SCROLL ANIMATIONS
+    // ============================================
+    function animateNumbers() {
+        const infoItems = document.querySelectorAll('.info-item');
+        const infoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+
+                    const valueEl = entry.target.querySelector('.info-value');
+                    if (valueEl && !valueEl.classList.contains('counted')) {
+                        valueEl.classList.add('counted', 'counting');
+                        const finalValue = valueEl.textContent;
+                        const numericValue = parseInt(finalValue.replace(/[^0-9]/g, ''));
+
+                        if (!isNaN(numericValue)) {
+                            let current = 0;
+                            const increment = numericValue / 40;
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= numericValue) {
+                                    valueEl.textContent = finalValue;
+                                    valueEl.classList.remove('counting');
+                                    clearInterval(timer);
+                                } else {
+                                    valueEl.textContent = Math.floor(current).toLocaleString();
+                                }
+                            }, 30);
+                        }
+                    }
+                }
+            });
+        }, { threshold: 0.3 });
+
+        infoItems.forEach(item => infoObserver.observe(item));
+    }
+
+    function animateAbout() {
+        const descSection = document.querySelector('.description');
+        const descObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        if (descSection) {
+            descObserver.observe(descSection);
+        }
+    }
+
+    function animateFeatures() {
+        const featureCards = document.querySelectorAll('.feature-card');
+        const featureObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        featureCards.forEach(card => featureObserver.observe(card));
+    }
+
+    function animateLocation() {
+        const locCards = document.querySelectorAll('.loc-card');
+        const mapContainer = document.querySelector('.map-container');
+
+        const locObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        locCards.forEach(card => locObserver.observe(card));
+        if (mapContainer) locObserver.observe(mapContainer);
+    }
+
+    function initScrollProgress() {
+        const progressBar = document.getElementById('scrollProgress');
+        if (!progressBar) return;
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            progressBar.style.width = progress + '%';
+        });
+    }
+
+    animateNumbers();
+    animateAbout();
+    animateFeatures();
+    animateLocation();
+    initScrollProgress();
+
+    // ============================================
+    // 7. GALLERY LIGHTBOX — FIX 4
+    // ============================================
+    const galleryImages = [];
+    let currentImageIndex = 0;
+
+    function buildGalleryArray() {
+        // Clear and rebuild from ALL gallery items (visible + hidden)
+        galleryImages.length = 0;
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach((item) => {
+            const img = item.querySelector('img');
+            const label = item.querySelector('.gallery-label');
+            if (img) {
+                galleryImages.push({
+                    src: img.getAttribute('src'),
+                    caption: label ? label.textContent : ''
+                });
+            }
+        });
+    }
+
+    function openLightbox(index) {
+        // Rebuild array to include any newly shown items
+        buildGalleryArray();
+        currentImageIndex = index;
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        const lightboxCounter = document.getElementById('lightboxCounter');
+
+        if (!galleryImages[index]) return;
+
+        lightboxImg.src = galleryImages[index].src;
+        lightboxCaption.textContent = galleryImages[index].caption;
+        lightboxCounter.textContent = (index + 1) + ' / ' + galleryImages.length;
+
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function navigateLightbox(direction) {
+        buildGalleryArray();
+        currentImageIndex += direction;
+
+        if (currentImageIndex >= galleryImages.length) {
+            currentImageIndex = 0;
+        } else if (currentImageIndex < 0) {
+            currentImageIndex = galleryImages.length - 1;
+        }
+
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        const lightboxCounter = document.getElementById('lightboxCounter');
+
+        lightboxImg.style.opacity = '0';
+        lightboxImg.style.transform = 'scale(0.95)';
+
+        setTimeout(() => {
+            lightboxImg.src = galleryImages[currentImageIndex].src;
+            lightboxCaption.textContent = galleryImages[currentImageIndex].caption;
+            lightboxCounter.textContent = (currentImageIndex + 1) + ' / ' + galleryImages.length;
+            lightboxImg.style.opacity = '1';
+            lightboxImg.style.transform = 'scale(1)';
+        }, 200);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        const lightbox = document.getElementById('lightbox');
+        if (!lightbox.classList.contains('active')) return;
+
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        if (e.key === 'ArrowRight') navigateLightbox(1);
+    });
+
+    // Click outside lightbox content to close
+    document.getElementById('lightbox').addEventListener('click', (e) => {
+        if (e.target.id === 'lightbox') {
+            closeLightbox();
+        }
+    });
+
+    // Build gallery on load
+    buildGalleryArray();
+
+    // ============================================
+    // 8. SEE MORE GALLERY TOGGLE — FIX 5
+    // ============================================
+    let galleryExpanded = false;
+
+    function toggleGallery() {
+        const hiddenItems = document.querySelectorAll('.gallery-item.hidden');
+        const btnText = document.getElementById('seeMoreText');
+        const arrow = document.getElementById('seeMoreArrow');
+
+        galleryExpanded = !galleryExpanded;
+
+        if (galleryExpanded) {
+            // Show all hidden items
+            hiddenItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('show');
+                }, index * 80);
+            });
+            btnText.textContent = 'Show Less';
+            arrow.style.transform = 'rotate(180deg)';
+        } else {
+            // Hide items
+            hiddenItems.forEach(item => {
+                item.classList.remove('show');
+            });
+            btnText.textContent = 'See More Photos';
+            arrow.style.transform = 'rotate(0deg)';
+
+            // Scroll back to gallery top
+            document.querySelector('.gallery').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Rebuild gallery array to reflect new visible images
+        buildGalleryArray();
+    }
+    </script>
 </body>
 </html>
